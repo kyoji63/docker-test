@@ -10,3 +10,9 @@ services:
       - .:/user/src/app
     environment:
       NODE_ENV: development
+    networks:
+      - microservices-network
+
+networks:
+  microservices-network:
+    external:true
