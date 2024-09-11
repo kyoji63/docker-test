@@ -15,4 +15,4 @@ services:
 
 networks:
   microservices-network:
-    external:true
+    external: true
