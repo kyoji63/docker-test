@@ -6,13 +6,12 @@ services:
     ports:
       - 8080:80
     volumes:
-      - ./conf/default.conf:/etc/nginx/conf.d/default.conf
+      # - ./conf/default.conf:/etc/nginx/conf.d/default.conf
       - ./src:/usr/share/nginx/html
-    depends_on:
-      - api # 指定されたサービス（この場合は api）が最初に起動してから、依存するサービス（この場合はNginxなどの web サービス）が起動することを保証
     networks:
       - microservices-network
 
 networks:
   microservices-network:
+    name: microservices-network
     external: true
